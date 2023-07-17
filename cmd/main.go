@@ -3,7 +3,8 @@ package main
 import (
 	"database/sql"
 	"log"
-
+        "fmt"
+	
 	"github.com/gin-gonic/gin"
 	"github.com/heloayer/rest/initialize"
 	"github.com/heloayer/rest/internal/interfaces"
@@ -23,7 +24,7 @@ func main() {
 
 	err = initialize.Init()
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err) // just in case log.Fatal is denied as docker-compose up is needed
 	}
 
 	if err := r.Run(); err != nil {
