@@ -22,9 +22,9 @@ func main() {
 	r := gin.Default()
 	interfaces.Routes(r)
 
-	err = initialize.Init()
+	err = initialize.Init()  // run docker-compose up
 	if err != nil {
-		fmt.Println(err) // just in case log.Fatal is denied as docker-compose up is needed
+		fmt.Println(err) 
 	}
 
 	if err := r.Run(); err != nil {
