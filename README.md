@@ -1,4 +1,3 @@
 # for TSARKA
 
-run the app in docker
-use docker-compose up
+run the app in docker using docker-compose up
